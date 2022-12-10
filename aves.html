@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <title>El mundo de las Aves</title>
+    <meta name="description" content="Una aplicación web de vídeos interactivos para aprender de forma divertida y amena sobre los diversos seres vivos y la naturaleza.">  
+	<meta name="author" content="David Arias Escribano y Patricia Díez Herguido">
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/aves.css">
+    <link rel="shortcut icon" href= "icon/tigreHuella.ico" type= "image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/eraser-dust" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/aves.js"></script>
+    <script src="js/reproducir.js"></script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/eraser-dust');
+    </style>
+
+</head>
+
+<header>
+
+    <div class="cabecera">
+        <h1>EL MUNDO DE LAS AVES</h1>
+    </div>
+
+</header>
+
+<body style="background-image: url('imagenes/aves_fondo.png')">
+
+    <div class="reproductor">
+
+        <div id="cartelera" style="background-image: url('imagenes/fondo_pergamino.png'); width: 100; height: 100;">
+            <p>
+                En este vídeo podrás aprender <br> muchas curiosidades acerca <br>de las aves, 
+                así como <br>descubrir muchos de los <br>curiosos seres que pertenecen <br>a este grupo.
+                <br>
+                <br>
+                Se trata de un vídeo <br>interactivo, por lo que,<br> a lo largo de la reproducción,<br>
+                podrás interactuar con él <br>para aprender sobre las <br>diversas aves de <br>forma divertida y amena.
+            </p>
+
+            <button onclick="elegirPelicula()" id="boton1"></button>
+        
+        </div>
+
+        <div id="pantalla" style="background-image: url('imagenes/aves_fondo_video.png'); width: 100; height: 100;">
+            
+            <video class="video" id="video">
+
+                <source src="videos/las aves.mp4">
+
+            </video>
+
+            <div class="overlay">
+
+                <p class="textoverlay"></p> 
+
+                <!--ENLACES-->
+                <a href= "https://pangeanimales.com/aves/loro/" class="linkLoros"></a> 
+                <a href= "https://www.tri-tro.com/incubacion-pollito-castellano/fases-del-pollito-dentro-del-huevo/" class="linkHuevos"></a> 
+
+                <!--PREGUNTA 1-->
+                <button id="answer1" class="opcionQuiz">Setas</button>
+                <button id="answer2" class="opcionQuiz">Pequeños insectos</button>
+                <button id="answer3" class="opcionQuiz">Néctar de las flores</button>
+                <button id="answer4" class="opcionQuiz">Semillas</button>
+
+                <!--PREGUNTA 2-->
+                <button id="answer5" class="opcionQuiz2">25 km/h</button>
+                <button id="answer6" class="opcionQuiz2">10 km/h</button>
+                <button id="answer7" class="opcionQuiz2">100 km/h</button>
+                <button id="answer8" class="opcionQuiz2">70 km/h</button>
+
+                <!--PREGUNTA 3-->
+                <input id="answerEscrita" class="sendAnswer" type="text">
+                <br>
+                <button id="answer9" class="sendAnswer">Comprobar</button>
+
+                <!--PREGUNTA 4-->
+                <button id="answer10" class="opcionQuiz3">Avestruz</button>
+                <button id="answer11" class="opcionQuiz3">Murciélago</button>
+                <button id="answer12" class="opcionQuiz3">Águila Imperial</button>
+                <button id="answer13" class="opcionQuiz3">Mirlo</button>
+
+            </div>
+
+            <div class="overlay2">
+                <p class="textoverlay4"></p> 
+                <p class="textoverlay5"></p> 
+                <p class="textoverlay6"></p> 
+                <p class="textoverlay7"></p> 
+                <p class="textoverlay8"></p> 
+            </div>
+
+            <div class="overlay3">
+                <button id="volverAreproducir" onclick="volverAreproducir()">
+                    <img src="imagenes/replay.png" id="volverAlPrincipio" onmouseout="this.style.opacity=1;this.filters.alpha.opacity='100';" onmouseover="this.style.opacity=0.5;this.filters.alpha.opacity='20';">
+                </button>
+            </div> 
+
+            <div id="interaccionVideo" class="interaccionVideo">
+
+                <input type="button" id="iniciarReproduccion" class="menuVideo" value="&#9658;">
+
+                <label></label>
+                <strong>Ajustes de sonido:&nbsp;</strong>
+                <input type="button" id="bajarSonido" class="menuVideo" value="&#x1F569;">
+                <input type="button" id="aumentarSonido" class="menuVideo" value="&#x1F56A;">
+                <input type="button" id="quitarSonido" class="menuVideo" value="&#x1F507;">
+
+                <label></label>
+                <input type="button" id="volverAtras" class="menuVideo" value="&#x23ea;">
+                <input type="button" id="avanzar" class="menuVideo" value="&#x23e9;">
+                <progress id='barraReproduccion' min='0' max='100' value='0'></progress>
+                <input type="button" id="repetir" class="menuVideo" value="&#x1F503;">
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<footer>
+    <div class="pie"></div>
+</footer>

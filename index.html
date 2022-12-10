@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="utf-8" />
+    <title>Wild Quiz</title>
+    <meta name="description" content="Una aplicación web de vídeos interactivos para aprender de forma divertida y amena sobre los diversos seres vivos y la naturaleza.">  
+	<meta name="author" content="David Arias Escribano y Patricia Díez Herguido">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href= "icon/tigreHuella.ico" type= "image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/eraser-dust" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/eraser-dust');
+    </style>
+
+</head>
+
+<body background="imagenes/fondoAnimales.png">
+
+    <header class="header">
+
+        <div class="imagenDecoracion1">
+            <img src="imagenes/imgCabecera.png" class="imgDecoracion1">
+        </div>
+
+        <div class="imagenDecoracion2">
+            <img src="imagenes/imagenTigre.png" class="imgDecoracion2">
+        </div>
+        
+        <div class="cabecera">
+            <h1>&nbsp;&nbsp;WILD QUIZ</h1>
+        </div>
+
+    </header>
+
+    <main class="main">
+
+        <h2 class="menuTitulo">MENÚ PRINCIPAL</h2>
+        <div class="eleccionMenu">
+            
+            <p class="QuizOpcion">¿Cuánto sabes sobre el Mundo Animal?</p>
+            <a href=".\quiz.html" class="quizOpt" onmouseout="this.style.opacity=1;this.filters.alpha.opacity='100';" onmouseover="this.style.opacity=0.4;this.filters.alpha.opacity='20';">
+                <img src="imagenes/quizImg.png" class="quizImg">
+            </a>   
+            
+            <p class="opcionVegetales">¿Cuánto sabes sobre el Mundo Vegetal?</p>
+            <a href=".\plantas.html" class="plantasQuiz" onmouseout="this.style.opacity=1;this.filters.alpha.opacity='100';" onmouseover="this.style.opacity=0.4;this.filters.alpha.opacity='20';">
+                <img src="imagenes/plantaOpcion.png" class="imagenVegetal">
+            </a>
+
+            <p class="opcioninsectos">¿Cuánto sabes sobre el Mundo de los Insectos?</p>
+            <a href=".\insectos.html" class="insectosQuiz" onmouseout="this.style.opacity=1;this.filters.alpha.opacity='100';" onmouseover="this.style.opacity=0.4;this.filters.alpha.opacity='20';">
+                <img src="imagenes/opcionInsectos.png" class="imageninsectos">
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

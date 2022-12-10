@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+
+<head>
+	
+    <meta charset="utf-8" />
+    <title>Wild Quiz</title>
+	<meta name="description" content="Una aplicación web de vídeos interactivos para aprender de forma divertida y amena sobre los diversos seres vivos y la naturaleza.">  
+	<meta name="author" content="David Arias Escribano y Patricia Díez Herguido">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href= "icon/tigreHuella.ico" type= "image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/eraser-dust" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/eraser-dust');
+    </style>
+
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
+		<meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
+		<meta name="author" content="Codrops" />
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+
+</head>
+
+<body background="imagenes/fondoAnimales.png">
+
+    <header class="header">
+        <div class="imagenDecoracion1">
+            <img src="imagenes/imgCabecera.png" class="imgDecoracion1">
+        </div>
+
+        <div class="imagenDecoracion2">
+            <img src="imagenes/imagenTigre.png" class="imgDecoracion2">
+        </div>
+        
+        <div class="cabecera">
+            <h1>&nbsp;&nbsp;CATEGORÍAS</h1>
+        </div>
+    </header>
+    <main class="main">
+        <h2 class="menuTitulo2">Selecciona la categoría en la que desea jugar:</h2>
+        <div class="container">	
+			
+			<div class="main clearfix">
+				<nav id="menu" class="nav">					
+					<ul>
+						
+						<li>
+							<a href=".\mamiferos.html">
+								<div class="iconoMenu">
+                                    <img src= "imagenes/mamifero.png"> 
+                                </div>
+								<span>Mamíferos</span>
+							</a>
+						</li>
+						<li>
+							<a href=".\aves.html">
+								<div class="iconoMenu">
+                                    <img src= "imagenes/ave.png"> 
+                                </div>
+								<span>Aves</span>
+							</a>
+						</li>
+						<li>
+							<a href=".\reptiles.html">
+								<div class="iconoMenu">
+                                    <img src= "imagenes/reptiles.png"> 
+                                </div>
+								<span>Reptiles</span>
+							</a>
+						</li>
+						<li>
+							<a href=".\peces.html">
+								<div class="iconoMenu">
+                                    <img src= "imagenes/pez.png"> 
+                                </div>
+								<span>Peces</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<script>
+			
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+		
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+		
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+
+			
+			document.onclick = function(e) {
+				var mobileButton = document.getElementById('menutoggle'),
+					buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+				if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+					changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+				}
+			}
+		</script>
+    </main>
+
+</body>
+
+</html>

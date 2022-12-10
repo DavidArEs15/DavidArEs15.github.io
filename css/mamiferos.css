@@ -1,0 +1,278 @@
+
+.cabecera {
+    width: 103%;
+    height: 105px;
+    display: block;
+    position: relative;
+    background: linear-gradient(rgb(213, 155, 255), rgb(139, 74, 199));
+    text-align: center;
+    top: -27px;
+    left: -20px;
+    font-family: 'EraserDust', sans-serif;
+    color: rgb(71, 10, 93);
+    font-size: 20px;
+}
+
+.pie {
+    top: 15px;
+    left: -20px;
+    display: block;
+    position: relative;
+    background: linear-gradient(rgb(213, 155, 255), rgb(139, 74, 199));
+    width: 103%;
+    height: 108px;
+}
+
+p {
+    font-size: 30px;
+    font-family: 'EraserDust', sans-serif;
+    text-align: center;
+}
+
+#cartelera {
+    gap: 15px;
+    display: grid;
+    padding-top: 50px;
+    float: left;
+    grid-template-rows: repeat(6, 50px);
+    width: 26.65%;
+    height: 102%;
+    
+}
+
+#pantalla {
+    width: 55%;
+    height: 720px;
+    float: right;
+    padding-top: 15px;
+    position: relative;
+    left: -215px;
+    display: block;
+}
+
+.reproductor {
+    height: 692px;
+    left: -20px;
+    display: block;
+    top: -28px;
+    width: 103%;
+    position: relative;
+}
+
+#boton1 {
+    justify-self: center;
+    background-color: rgb(188, 148, 243);
+    font-family: 'EraserDust', sans-serif;
+    color: rgb(71, 10, 93);
+    font-size: 23px;
+    width: 60%;
+    visibility: hidden;
+}
+
+h1 {
+    padding-top: 0.75cm;
+}
+
+#video {
+    height: 700px;
+    padding-top: 40px;
+    width: 100%;
+}
+
+#video {
+    max-height: 650px;
+}
+
+#interaccionVideo {
+    padding-left: 20px;
+}
+
+progress { 
+    accent-color: rgb(251, 171, 91);
+    background-color: rgb(194, 255, 189); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35) inset;
+    cursor: pointer;
+}
+
+#iniciarReproduccion {
+    border-radius: 100%;
+    height: 26px;
+}
+
+.interaccionVideo input {
+    margin-top: -0.5cm;
+    border-color: rgb(94, 94, 234);
+    background-color: rgb(107, 243, 218);
+    cursor: pointer;
+}
+
+.linkJirafas,
+.textoverlay4,
+.linkFocas {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'EraserDust', sans-serif;
+    color: rgb(90, 0, 149);
+
+}
+
+.textoverlay5 {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'EraserDust', sans-serif;
+    color: rgb(90, 0, 149);
+
+}
+
+.textoverlay6 {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'EraserDust', sans-serif;
+    color: rgb(90, 0, 149);
+
+}
+
+.textoverlay7 {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'EraserDust', sans-serif;
+    color: rgb(90, 0, 149);
+
+}
+
+.textoverlay8 {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'EraserDust', sans-serif;
+    color: rgb(90, 0, 149);
+
+}
+
+.textoverlay {
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'EraserDust', sans-serif;
+    color: rgb(90, 0, 149);
+
+}
+
+#answer9{
+    cursor: pointer;
+    margin-left: 4.75cm;
+    margin-bottom: 0.5cm;
+    border-radius: 20px;
+    height: 1cm;
+    width: 3cm;
+    font-size: 20px;
+    font-family: 'EraserDust', sans-serif;
+    color: rgb(72, 4, 90);
+    background-color: rgb(179, 92, 255);
+    border-color: rgb(116, 23, 209);
+    
+}
+
+#answerEscrita{
+    font-size: 25px;
+    font-family: 'EraserDust', sans-serif;
+    margin-left: 0.5cm;
+    background-color: rgb(231, 176, 255);
+    border-color: rgb(116, 23, 209);
+    height: 1.75cm;
+    width: 6.5cm;
+}
+
+
+.overlay {
+    border-radius: 20px;
+    position: absolute;
+    top: 11.5cm;
+    background-color: rgba(199, 140, 255, 0.829);
+    right: 1.5cm;
+    
+}
+
+.overlay2 {
+    border-radius: 20px;
+    position: absolute;
+    top: 2.5cm;
+    background-color: rgba(215, 151, 255, 0.829);
+    right: 1.5cm;
+    
+}
+
+.overlay3 {
+    border-radius: 20px;
+    position: absolute;
+    top: 2.5cm;
+    right: 1.5cm;
+    
+}
+
+#volverAreproducir{
+
+    border-radius: 100%;
+    margin-right: 0.5cm;
+    margin-bottom: 0.5cm;
+    margin-left: 0.5cm;
+    background-color: rgb(100, 0, 139);
+    height: 4.5cm;
+    width: 4.5cm;
+    cursor: pointer;
+
+}
+
+#volverAlPrincipio{
+    border-radius: 100%;
+    height: 3cm;
+    width: 3cm;
+}
+
+#linkJirafas,
+.linkFocas,
+.opcionQuiz,
+.opcionQuiz2,
+.opcionQuiz3,
+.volverAreproducir
+{
+    display: none;
+}
+
+.sendAnswer{
+    display: none;
+}
+
+.opcionQuiz,
+.opcionQuiz2,
+.opcionQuiz3 {
+    height: 3cm;
+    width: 5cm;
+    font-family: 'EraserDust', sans-serif;
+    font-size: 30px;
+    background-color: rgb(159, 81, 214);
+    border-radius: 15px;
+    color: rgb(71, 10, 93);
+    border-color: rgb(116, 23, 209);
+    cursor: pointer;
+}
+
+.opcionQuiz:hover {background-color: #852a38}
+.opcionQuiz2:hover {background-color: #852a38}
+.opcionQuiz3:hover {background-color: #852a38}
+
+#answer3,
+#answer4,
+#answer7,
+#answer8,
+#answer12,
+#answer13 {
+    float: right;
+}
+
+#answer1,
+#answer2,
+#answer5,
+#answer6,
+#answer10,
+#answer11 {
+    float: left;
+}
